@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "br.com.aditum:pinpadSdk:2.1.0"
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "http://artifacts.aditum.com.br:8081/artifactory/gradle-release/Java/"
+        }
+    }
+}
